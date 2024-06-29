@@ -1,0 +1,12 @@
+#%Module 1.0
+#
+# ARGoS Environment
+#
+proc ModulesHelp { } {
+    puts stderr "WARNING: This wrapper is not meant to be used alone."
+    puts stderr "This provides the launching scripts for a container."
+}
+
+module-whatis           "argos wrapper script"
+prepend-path            PATH                    /scratch/shared/nestlab/resources/modulefiles/argos/wrapper/1.0-bin
+

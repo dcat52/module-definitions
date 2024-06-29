@@ -1,0 +1,6 @@
+#!/bin/bash
+img=${TREE_APPTAINER}
+cmd=$(basename "$0")
+arg="$@"
+
+apptainer exec "${img}" $cmd "$@"

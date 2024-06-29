@@ -1,0 +1,13 @@
+#%Module 1.0
+#
+# tree cmd
+#
+proc ModulesHelp { } {
+    puts stderr "This module provides tree "
+}
+
+module-whatis       "linux tree cmd"
+
+module              load                    apptainer
+prepend-path        PATH                    ./bin
+setenv              TREE_APPTAINER         "/scratch/shared/nestlab/resources/files/tree.sif"

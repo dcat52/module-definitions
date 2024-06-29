@@ -1,0 +1,16 @@
+#%Module 1.0
+#
+# ARGoS Environment
+#
+proc ModulesHelp { } {
+    puts stderr "This module provides argos with additional packages for buzz, KheperaIVs, and Kilobots"
+    puts stderr "Apptainer is used to containerize the installed components"
+    puts stderr "The module argos/wrapper is used to launch the container correctly"
+}
+
+module-whatis       "ARGoS w/ Buzz, KheperaIVs, Kilobots, etc"
+
+module              load                    apptainer
+module              load                    argos/wrapper/1.0
+setenv              ARGOS_APPTAINER         "/scratch/shared/nestlab/resources/files/argos_full_22-12-08.sif"
+set-alias           argos3env               "apptainer shell /scratch/shared/nestlab/resources/files/argos_full_22-12-08.sif"
